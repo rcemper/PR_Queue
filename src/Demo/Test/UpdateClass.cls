@@ -18,6 +18,9 @@ ClassMethod update()
 	}
 	set str=$replace(str,"WILL BE REPLACED",newProperty)
 	//W str,!
+	if $g(^QueueData)=1{
+	    set str="<kpi xmlns=""http://www.intersystems.com/deepsee/kpi"""_$c(13,10)_"name=""Demo/QueueMonitoringKPI"""_$c(13,10)_"sourceType=""manual"""_$c(13,10)_"caption=""队列趋势"""_$c(13,10)_">"_$c(13,10)_"<property name=""Num""/>"_$c(13,10)_"<property name=""QUEUETESTBO001""/>"_$c(13,10)_"<property name=""QUEUETESTBO002""/>"_$c(13,10)_"<property name=""QUEUETESTBO003""/>"_$c(13,10)_"</kpi>"
+	}
 	set newData=##class(%Stream.TmpCharacter).%New()
 	DO newData.Write(str)
 	set xdata.Data=newData
