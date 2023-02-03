@@ -65,7 +65,7 @@ Method %OnAfterCreatePage() As %Status
 {
 	Set tSC = ##super()
 	If $$$ISERR(tSC) Quit tSC
-	//Do ##class(Demo.Test.UpdateClass).update()
+	Do ##class(Demo.Test.UpdateClass).update()
 	//Do ##class(Ens.DeepSee.ActivityVolumeAndDurationKPI).GetPeriod(..currentPeriod, .begin, .end)
 	//Set tMsg = ..%GetComponentById("msgText1")
 	//Set tMsg.value = $$$FormatText($$$Text("Period from %1 until %2"),begin,end)
