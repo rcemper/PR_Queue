@@ -3,7 +3,7 @@
   <Document name="queuemonitoring.ZPM">
     <Module>
       <Name>queuemonitoring</Name>
-      <Version>1.0.3</Version>
+      <Version>1.0.4</Version>
       <Description>Intersystems IRIS platform queue trend monitoring component</Description>
       <Keywords>Queue,Monitor</Keywords>
       <Packaging>module</Packaging>
